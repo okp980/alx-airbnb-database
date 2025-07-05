@@ -39,3 +39,18 @@ This file includes the following queries:
    - Finds users who have made more than 3 bookings.
    - Uses a correlated subquery in the WHERE clause to count bookings for each user.
    - Returns all columns from the User table for users meeting the criteria.
+
+## aggregations_and_window_functions.sql
+
+This file includes the following queries:
+
+1. **Total Number of Bookings per User (Aggregation):**
+
+   - Calculates the total number of bookings made by each user.
+   - Uses the COUNT function and GROUP BY clause to aggregate bookings by user_id.
+   - Returns user_id and the corresponding total number of bookings.
+
+2. **Ranking Properties by Total Bookings (Window Function):**
+   - Ranks properties based on the total number of bookings they have received.
+   - Uses a subquery to count bookings per property, then applies the RANK window function to order properties by booking count (highest to lowest).
+   - Returns property_id, total_bookings, and the rank for each property.
